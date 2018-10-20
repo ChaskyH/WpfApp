@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WpfApp.DAL\WpfApp.DAL.csproj" />
+    <ProjectReference Include="..\WpfApp.DataProtocol\WpfApp.DataProtocol.csproj" />
+  </ItemGroup>
+
+</Project>

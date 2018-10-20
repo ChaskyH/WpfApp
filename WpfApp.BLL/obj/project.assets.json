@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "WpfApp.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.2",
+        "dependencies": {
+          "EntityFramework": "6.2.0",
+          "WpfApp.DataProtocol": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WpfApp.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WpfApp.DAL.dll": {}
+        }
+      },
+      "WpfApp.DataProtocol/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.2",
+        "compile": {
+          "bin/placeholder/WpfApp.DataProtocol.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WpfApp.DataProtocol.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EntityFramework/6.2.0": {
+      "sha512": "7u/Xw6dnODaoB8opNC/Uz8nT/LKOxsvJhObYU+m0CErCXdOsyTC1MZwqQoam8lMehLTxBoMBewvWoOQUBaUKsQ==",
+      "type": "package",
+      "path": "entityframework/6.2.0",
+      "files": [
+        ".signature.p7s",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.transform",
+        "entityframework.6.2.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    },
+    "WpfApp.DAL/1.0.0": {
+      "type": "project",
+      "path": "../WpfApp.DAL/WpfApp.DAL.csproj",
+      "msbuildProject": "../WpfApp.DAL/WpfApp.DAL.csproj"
+    },
+    "WpfApp.DataProtocol/1.0.0": {
+      "type": "project",
+      "path": "../WpfApp.DataProtocol/WpfApp.DataProtocol.csproj",
+      "msbuildProject": "../WpfApp.DataProtocol/WpfApp.DataProtocol.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5.2": [
+      "WpfApp.DAL >= 1.0.0",
+      "WpfApp.DataProtocol >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\chasky\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.BLL\\WpfApp.BLL.csproj",
+      "projectName": "WpfApp.BLL",
+      "projectPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.BLL\\WpfApp.BLL.csproj",
+      "packagesPath": "C:\\Users\\chasky\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.BLL\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\chasky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net452"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net452": {
+          "projectReferences": {
+            "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DAL\\WpfApp.DAL.csproj": {
+              "projectPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DAL\\WpfApp.DAL.csproj"
+            },
+            "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DataProtocol\\WpfApp.DataProtocol.csproj": {
+              "projectPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DataProtocol\\WpfApp.DataProtocol.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net452": {}
+    }
+  }
+}

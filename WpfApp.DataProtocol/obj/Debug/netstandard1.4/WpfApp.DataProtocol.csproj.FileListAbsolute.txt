@@ -1,0 +1,8 @@
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\bin\Debug\netstandard1.4\WpfApp.DataProtocol.deps.json
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\bin\Debug\netstandard1.4\WpfApp.DataProtocol.dll
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\bin\Debug\netstandard1.4\WpfApp.DataProtocol.pdb
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\obj\Debug\netstandard1.4\WpfApp.DataProtocol.csproj.CoreCompileInputs.cache
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\obj\Debug\netstandard1.4\WpfApp.DataProtocol.AssemblyInfo.cs
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\obj\Debug\netstandard1.4\WpfApp.DataProtocol.dll
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\obj\Debug\netstandard1.4\WpfApp.DataProtocol.pdb
+C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\obj\Debug\netstandard1.4\WpfApp.DataProtocol.csprojAssemblyReference.cache
