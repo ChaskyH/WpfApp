@@ -18,14 +18,18 @@
                 </ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml">
                 </ResourceDictionary>
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml">
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.DeepPurple.xaml">
                 </ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml">
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <converters:InverseBooleanValueConverter x:Key="InverseBooleanValueConverter"/>
+            <converters:InverseBoolean2VisiblityConverter x:Key="InverseBoolean2VisibiltyConverter"/>
+            <converters:Boolean2VisibiltiyConverter x:Key="Boolean2VisibiltyConverter"/>
             <converters:SingleValue2ArrayConverter x:Key="SingleValue2ArrayConverter"/>
             <vm:ViewModelLocator x:Key="ViewModelLocator" />
+            <SolidColorBrush Color="{StaticResource Primary600}" x:Key="PrimaryBrush" />
+            <SolidColorBrush Color="{StaticResource Accent400}" x:Key="AccentBrush" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

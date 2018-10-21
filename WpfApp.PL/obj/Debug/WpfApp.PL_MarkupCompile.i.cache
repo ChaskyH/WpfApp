@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\chasky\Documents\prg\WpfApp\WpfApp.PL\obj\Debug\
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\
 WpfApp.PL
 none
 false
 DEBUG;TRACE
-C:\Users\chasky\Documents\prg\WpfApp\WpfApp.PL\App.xaml
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\App.xaml
 3-2134675753
 
-201899596486
-78-1227711031
+23-1290140576
+78-2098536010
 Controls\CreateUserControl.xaml;Controls\LogInControl.xaml;MainWindow.xaml;
 
-False
+True
 

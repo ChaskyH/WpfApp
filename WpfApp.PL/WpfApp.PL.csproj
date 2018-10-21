@@ -74,6 +74,9 @@
     <Compile Include="Controls\CreateUserControl.xaml.cs">
       <DependentUpon>CreateUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\Boolean2VisibiltiyConverter.cs" />
+    <Compile Include="Converters\Color2BrushConverter.cs" />
+    <Compile Include="Converters\InverseBoolean2VisiblityConverter.cs" />
     <Compile Include="Converters\InverseBooleanValueConverter.cs" />
     <Compile Include="Converters\MutilpleValues2ArrayConverter.cs" />
     <Compile Include="Converters\SingleValue2ArrayConverter.cs" />
