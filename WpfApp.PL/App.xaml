@@ -6,6 +6,7 @@
     xmlns:vm="clr-namespace:WpfApp.PL.ViewModel" 
     xmlns:converters="clr-namespace:WpfApp.PL.Converters"  
     StartupUri="MainWindow.xaml" 
+    xmlns:properties="clr-namespace:WpfApp.PL.Properties"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     d1p1:Ignorable="d" 
     xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
@@ -30,6 +31,7 @@
             <vm:ViewModelLocator x:Key="ViewModelLocator" />
             <SolidColorBrush Color="{StaticResource Primary600}" x:Key="PrimaryBrush" />
             <SolidColorBrush Color="{StaticResource Accent400}" x:Key="AccentBrush" />
+            <properties:Settings x:Key="UserId"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

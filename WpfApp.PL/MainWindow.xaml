@@ -49,7 +49,7 @@
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
                 </Grid.Effect>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <materialDesign:Chip Content="{Binding User.FullName}" Icon="{Binding Path=User.Initials}" />
+                    <materialDesign:Chip IsEnabled="False" Content="{Binding User.FullName}" Icon="{Binding Path=User.Initials}" />
                     <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                         <StackPanel Width="150">
                             <Button Content="Settings"/>

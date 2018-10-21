@@ -1,5 +1,6 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using System;
 using System.Windows;
 using System.Windows.Input;
 using WpfApp.BLL;
@@ -29,12 +30,28 @@ namespace WpfApp.PL.ViewModel
             Title = "Nutrition Tracker";
 
             LogOutCommand = new RelayCommand(
-                () => { User = null; }
+                () => {
+                    User = null;
+                    Properties.Settings.Default["UserId"] = "";
+                    Properties.Settings.Default.Save();
+                }
              );
 
             ExitCommand = new RelayCommand(
                 () => Application.Current.Shutdown()
             );
+
+            // bring the user guid from default settings
+            try
+            {
+                string userId = Properties.Settings.Default["UserId"] as string;
+                UsersLogic usersLogic = new UsersLogic();
+                User = usersLogic.GetUser(new Guid(userId));
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
         
         private string _title = "";
@@ -92,6 +109,13 @@ namespace WpfApp.PL.ViewModel
         {
             UsersLogic usersLogic = new UsersLogic();
             User = usersLogic.GetUser(credentials);
+
+            if (IsUserLoggedIn && credentials.RememberMe)
+            {
+                Properties.Settings.Default["UserId"] = User.Id.ToString();
+                Properties.Settings.Default.Save();
+            }
+
             return User != null;
         }
 

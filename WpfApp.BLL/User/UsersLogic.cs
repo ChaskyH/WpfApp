@@ -90,5 +90,19 @@ namespace WpfApp.BLL
 
             return user;
         }
+
+        public User GetUser(Guid id)
+        {
+            User user = null;
+
+            UsersService userService = new UsersService();
+            var users = from u in userService.Users
+                        where u.Id == id
+                        select u;
+
+            user = users.FirstOrDefault();
+
+            return user;
+        }
     }
 }
