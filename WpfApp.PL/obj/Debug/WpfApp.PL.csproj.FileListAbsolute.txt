@@ -80,3 +80,6 @@ C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\WpfApp.PL.csproj.CoreCompil
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\WpfApp.PL.csproj.CopyComplete
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\WpfApp.PL.exe
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\WpfApp.PL.pdb
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\FoodBrowser.g.cs
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\FoodBrowser.baml

@@ -28,3 +28,4 @@ C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.Assembly
 C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.csproj.CopyComplete
 C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.pdb
+C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\bin\Debug\net452\Newtonsoft.Json.dll

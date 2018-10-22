@@ -24,3 +24,6 @@ C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.Assembly
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.csproj.CopyComplete
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.pdb
+C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\Newtonsoft.Json.dll
+C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.dll
+C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.xml

@@ -41,10 +41,17 @@
                 </materialDesign:Flipper>
             </Grid>
         </materialDesign:DialogHost.DialogContent>
-        
-        <Grid Background="#FFDEDEDE">
-            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1010"/>
-            <Grid Height="60" VerticalAlignment="Top" Background="{StaticResource AccentBrush}">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2" Height="60" VerticalAlignment="Top" Background="{StaticResource AccentBrush}">
                 <Grid.Effect>
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
                 </Grid.Effect>
@@ -63,7 +70,7 @@
                 </StackPanel>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Text="{Binding Title}"/>
             </Grid>
-            <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="{StaticResource PrimaryBrush}">
+            <Grid Grid.RowSpan="2" x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="{StaticResource PrimaryBrush}">
                 <StackPanel>
                     <Grid Height="60" Background="{StaticResource AccentBrush}" >
                         <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}"
@@ -88,8 +95,8 @@
                         </ListViewItem>
                         <ListViewItem x:Name="ItemCreate" Height="60">
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10"/>
-                                <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10"/>
+                                <materialDesign:PackIcon Kind="Magnify" Height="25" Width="25" Margin="10"/>
+                                <TextBlock Text="Browse Foods" VerticalAlignment="Center" Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="60">
@@ -107,6 +114,7 @@
                     </ListView>
                 </StackPanel>
             </Grid>
+            <controls:FoodBrowser Grid.Column="1" Grid.Row="1" Padding="20 20 20 20"/>
         </Grid>
     </materialDesign:DialogHost>
 </Window>

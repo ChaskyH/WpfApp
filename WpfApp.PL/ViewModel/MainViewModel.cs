@@ -48,7 +48,7 @@ namespace WpfApp.PL.ViewModel
                 UsersLogic usersLogic = new UsersLogic();
                 User = usersLogic.GetUser(new Guid(userId));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

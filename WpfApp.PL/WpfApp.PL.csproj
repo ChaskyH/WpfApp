@@ -74,6 +74,9 @@
     <Compile Include="Controls\CreateUserControl.xaml.cs">
       <DependentUpon>CreateUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FoodBrowser.xaml.cs">
+      <DependentUpon>FoodBrowser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\Boolean2VisibiltiyConverter.cs" />
     <Compile Include="Converters\Color2BrushConverter.cs" />
     <Compile Include="Converters\InverseBoolean2VisiblityConverter.cs" />
@@ -82,10 +85,15 @@
     <Compile Include="Converters\SingleValue2ArrayConverter.cs" />
     <Compile Include="Validators\NonEmptyValidationRule.cs" />
     <Compile Include="ViewModel\CreateUserViewModel.cs" />
+    <Compile Include="ViewModel\FoodBrowserViewModel.cs" />
     <Compile Include="ViewModel\LogInViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="Controls\CreateUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FoodBrowser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

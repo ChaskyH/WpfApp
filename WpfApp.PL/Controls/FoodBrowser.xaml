@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="WpfApp.PL.Controls.FoodBrowser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp.PL.Controls"
+             xmlns:vms="clr-namespace:WpfApp.PL.ViewModel"
+             xmlns:assist="clr-namespace:WpfApp.PL.Assistants"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=FoodBrowser}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <DataTemplate x:Key="ThumbnailCellTemplate">
+            <Image Source="{Binding Path=Photo}" Height="35" />
+        </DataTemplate>
+        <DataTemplate x:Key="ViewButtonTemplate">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" Height="25" Width="25" 
+                    Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.ViewNutritionsCommand}" CommandParameter="{Binding Name}">
+                <materialDesign:PackIcon Kind="Eye" Height="18" Width="18" />
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="NameTextBoxTemplate">
+            <TextBox Text="{Binding Name}" Foreground="Black"/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:ColorZone Mode="Standard" Grid.ColumnSpan="2"
+                                  Padding="16">
+            <DockPanel>
+                <materialDesign:ColorZone   Mode="Standard"
+                                                Padding="8 4 8 4"
+                                                CornerRadius="2"
+                                                Panel.ZIndex="1"
+                                                materialDesign:ShadowAssist.ShadowDepth="Depth3">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button Style="{DynamicResource MaterialDesignToolButton}" Command="{Binding SearchCommand}">
+                            <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
+                        </Button>
+                        <TextBox Grid.Column="1"
+                                 Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                    Margin="8 0 0 0"
+                                    materialDesign:HintAssist.Hint="Search your favorite foods.."
+                                    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                    BorderThickness="0"
+                                    MinWidth="200"
+                                    VerticalAlignment="Center" >
+                            <TextBox.InputBindings>
+                                <KeyBinding Command="{Binding Path=SearchCommand}" Key="Enter" />
+                            </TextBox.InputBindings>
+                        </TextBox>
+                    </Grid>
+                </materialDesign:ColorZone>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <DataGrid ItemsSource="{Binding Foods}" Grid.Row="1"
+                  CanUserSortColumns="True"
+                  IsReadOnly="True"
+                  SelectionMode="Single" SelectionUnit="FullRow"
+                  CanUserAddRows="False"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="View" CellTemplate="{StaticResource ViewButtonTemplate}"/>
+                <DataGridTemplateColumn Width="80" Header="Photo" CellTemplate="{StaticResource ThumbnailCellTemplate}"/>
+                <DataGridTextColumn Width="150" Header="Name" Binding="{Binding Name}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Width="120" Header="Serving" Binding="{Binding ServingUnits}" TextBlock.TextAlignment="Center"/>
+        
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Grid.Column="1" Grid.Row="1" Header="dd"
+                    Style="{DynamicResource MaterialDesignCardGroupBox}"
+                Margin="5" DataContext="{Binding FoodNutritions}">
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Food"
+                                                 Height="32" Width="32"
+                                                 VerticalAlignment="Center" />
+                        <TextBlock Margin="8,0,0,0"
+                                  VerticalAlignment="Center"
+                                  Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                  Text="{Binding FoodName}" />   
+                    </StackPanel>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition  Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBlock Text="123456"/>
+                    <TextBlock Text="{Binding ServingUnit, Mode=OneWay}"/>
+                </StackPanel>
+                <Image Grid.Column="1" Source="{Binding Photo}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Grid>
+            
+        </GroupBox>
+    </Grid>
+</UserControl>
