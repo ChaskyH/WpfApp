@@ -20,6 +20,21 @@ namespace WpfApp.PL.ViewModel
             ViewNutritionsCommand = new RelayCommand<String>(
                     (x) => ViewNutritions(x)
                 );
+
+            if (IsInDesignMode)
+            {
+                FoodNutritions = new FoodNutritions()
+                {
+                    FoodName="Food Name", ServingUnit="Cups", ServingQuantity=2,
+                    ServingWeight="10"
+                };
+
+                Foods = new List<BasicFood>()
+                {
+                    new BasicFood()  { Name="Apple" },
+                    new BasicFood() { Name="Pear" }
+                };
+            }
         }
 
         public ICommand SearchCommand { get; set; }

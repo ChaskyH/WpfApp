@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETFramework,Version=v4.5.2": {
       "EntityFramework/6.2.0": {
@@ -32,23 +32,11 @@
           "EntityFramework": "6.2.0",
           "Newtonsoft.Json": "11.0.2",
           "WpfApp.DataProtocol": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/WpfApp.DAL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WpfApp.DAL.dll": {}
         }
       },
       "WpfApp.DataProtocol/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5.2",
-        "compile": {
-          "bin/placeholder/WpfApp.DataProtocol.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WpfApp.DataProtocol.dll": {}
-        }
+        "framework": ".NETFramework,Version=v4.5.2"
       }
     }
   },
@@ -82,10 +70,11 @@
       ]
     },
     "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "sha512": "znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
       "type": "package",
       "path": "newtonsoft.json/11.0.2",
       "files": [
+        ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -127,48 +116,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chasky\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\student\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.BLL\\WpfApp.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\student\\me\\WpfApp\\WpfApp.BLL\\WpfApp.BLL.csproj",
       "projectName": "WpfApp.BLL",
-      "projectPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.BLL\\WpfApp.BLL.csproj",
-      "packagesPath": "C:\\Users\\chasky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.BLL\\obj\\",
+      "projectPath": "C:\\Users\\student\\me\\WpfApp\\WpfApp.BLL\\WpfApp.BLL.csproj",
+      "outputPath": "C:\\Users\\student\\me\\WpfApp\\WpfApp.BLL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
-      "configFilePaths": [
-        "C:\\Users\\chasky\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "net452"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "net452": {
           "projectReferences": {
-            "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DAL\\WpfApp.DAL.csproj": {
-              "projectPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DAL\\WpfApp.DAL.csproj"
+            "C:\\Users\\student\\me\\WpfApp\\WpfApp.DataProtocol\\WpfApp.DataProtocol.csproj": {
+              "projectPath": "C:\\Users\\student\\me\\WpfApp\\WpfApp.DataProtocol\\WpfApp.DataProtocol.csproj"
             },
-            "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DataProtocol\\WpfApp.DataProtocol.csproj": {
-              "projectPath": "C:\\Users\\chasky\\Documents\\WpfApp\\WpfApp.DataProtocol\\WpfApp.DataProtocol.csproj"
+            "C:\\Users\\student\\me\\WpfApp\\WpfApp.DAL\\WpfApp.DAL.csproj": {
+              "projectPath": "C:\\Users\\student\\me\\WpfApp\\WpfApp.DAL\\WpfApp.DAL.csproj"
             }
           }
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {

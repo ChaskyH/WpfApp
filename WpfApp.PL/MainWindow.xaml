@@ -8,7 +8,6 @@
         xmlns:vms="clr-namespace:WpfApp.PL.ViewModel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" 
-        Foreground="White"
         WindowStartupLocation="CenterScreen" 
         WindowStyle="None"
         DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=Main}">
@@ -56,8 +55,8 @@
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
                 </Grid.Effect>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <materialDesign:Chip IsEnabled="False" Content="{Binding User.FullName}" Icon="{Binding Path=User.Initials}" />
-                    <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
+                    <materialDesign:Chip IsEnabled="False" Content="{Binding User.FullName}" Icon="{Binding Path=User.Initials}" Foreground="White"/>
+                    <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="White">
                         <StackPanel Width="150">
                             <Button Content="Settings"/>
                             <Button Content="Account"/>
@@ -68,12 +67,13 @@
                         </StackPanel>
                     </materialDesign:PopupBox>
                 </StackPanel>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Text="{Binding Title}"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Text="{Binding Title}" Foreground="White"/>
             </Grid>
             <Grid Grid.RowSpan="2" x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="{StaticResource PrimaryBrush}">
                 <StackPanel>
                     <Grid Height="60" Background="{StaticResource AccentBrush}" >
                         <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}"
+                                      Foreground="White"
                                       Height="25" Width="25"
                                     HorizontalAlignment="Right" Margin="10 10 25 10" >
                             <ToggleButton.Triggers>

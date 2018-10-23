@@ -27,3 +27,16 @@ C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.pdb
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\Newtonsoft.Json.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.xml
+C:\Users\student\me\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.csprojResolveAssemblyReference.cache
+C:\Users\student\me\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.AssemblyInfo.cs
+C:\Users\student\me\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.dll
+C:\Users\student\me\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.pdb
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DAL.dll
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DAL.pdb
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\EntityFramework.SqlServer.dll
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\EntityFramework.dll
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\Newtonsoft.Json.dll
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.dll
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DataProtocol.dll
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DataProtocol.pdb
+C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.xml

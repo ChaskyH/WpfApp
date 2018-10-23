@@ -29,3 +29,16 @@ C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.csproj.C
 C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.pdb
 C:\Users\chasky\Documents\WpfApp\WpfApp.BLL\bin\Debug\net452\Newtonsoft.Json.dll
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\WpfApp.BLL.dll
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\WpfApp.BLL.pdb
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\WpfApp.DAL.dll
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\WpfApp.DataProtocol.dll
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\Newtonsoft.Json.dll
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\EntityFramework.dll
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\WpfApp.DAL.pdb
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\WpfApp.DataProtocol.pdb
+C:\Users\student\me\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.csprojResolveAssemblyReference.cache
+C:\Users\student\me\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.AssemblyInfo.cs
+C:\Users\student\me\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.dll
+C:\Users\student\me\WpfApp\WpfApp.BLL\obj\Debug\net452\WpfApp.BLL.pdb
+C:\Users\student\me\WpfApp\WpfApp.BLL\bin\Debug\net452\EntityFramework.SqlServer.dll

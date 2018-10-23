@@ -80,36 +80,46 @@
         
             </DataGrid.Columns>
         </DataGrid>
-        <GroupBox Grid.Column="1" Grid.Row="1" Header="dd"
+        <GroupBox Grid.Column="1" Grid.Row="1" Margin="10, 35" Padding="10"
                     Style="{DynamicResource MaterialDesignCardGroupBox}"
-                Margin="5" DataContext="{Binding FoodNutritions}">
-            <GroupBox.HeaderTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon Kind="Food"
+                DataContext="{Binding FoodNutritions}">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <materialDesign:PackIcon Kind="Food" Foreground="White"
                                                  Height="32" Width="32"
                                                  VerticalAlignment="Center" />
-                        <TextBlock Margin="8,0,0,0"
-                                  VerticalAlignment="Center"
-                                  Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                                  Text="{Binding FoodName}" />   
-                    </StackPanel>
-                </DataTemplate>
-            </GroupBox.HeaderTemplate>
-            <Grid>
+                    <TextBlock Margin="8,0,0,0" Foreground="White"
+                               VerticalAlignment="Center" Text="{Binding FoodName}"
+                               Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                   />
+                </StackPanel>
+            </GroupBox.Header>
+            <Grid >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition  Width="2*"/>
+                    <ColumnDefinition  Width="1.2*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel>
-                    <TextBlock Text="123456"/>
-                    <TextBlock Text="{Binding ServingUnit, Mode=OneWay}"/>
+                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Padding="2,2,2,2" Text="{Binding ServingQuantity}" FontSize="15" />
+                        <TextBlock Padding="0,5,2,2" Text="{Binding ServingUnit}" FontSize="12" FontStyle="Italic"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Padding="2,2,2,2" Text="{Binding ServingWeight}" FontSize="15" />
+                        <TextBlock Padding="0,5,2,2" Text="g" FontSize="12" FontStyle="Italic"/>
+                    </StackPanel>
                 </StackPanel>
-                <Image Grid.Column="1" Source="{Binding Photo}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Border Grid.Column="1" BorderBrush="Black"
+                            BorderThickness="1"
+                            CornerRadius="3"
+                            HorizontalAlignment="Stretch"
+                            Margin="-2,0,-3,-1">
+                    <Image  Source="{Binding Photo}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Border>
             </Grid>
             
         </GroupBox>
