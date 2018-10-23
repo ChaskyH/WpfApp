@@ -172,6 +172,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LiveCharts.Wpf">
+      <Version>0.9.7</Version>
+    </PackageReference>
     <PackageReference Include="MaterialDesignThemes">
       <Version>2.4.1.1101</Version>
     </PackageReference>

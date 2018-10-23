@@ -125,3 +125,7 @@ C:\Users\student\me\WpfApp\WpfApp.PL\obj\Debug\MainWindow.baml
 C:\Users\student\me\WpfApp\WpfApp.PL\obj\Debug\WpfApp.PL.g.resources
 C:\Users\student\me\WpfApp\WpfApp.PL\obj\Debug\WpfApp.PL.Properties.Resources.resources
 C:\Users\student\me\WpfApp\WpfApp.PL\obj\Debug\WpfApp.PL.csproj.GenerateResource.Cache
+C:\Users\student\me\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.dll
+C:\Users\student\me\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.pdb
+C:\Users\student\me\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\student\me\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.Wpf.pdb
