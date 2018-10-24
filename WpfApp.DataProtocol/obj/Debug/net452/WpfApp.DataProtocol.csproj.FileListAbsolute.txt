@@ -8,7 +8,6 @@ C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\obj\Debug\net452\WpfApp
 C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DataProtocol\obj\Debug\net452\WpfApp.DataProtocol.AssemblyInfoInputs.cache
 C:\Users\chasky\Documents\WpfApp\WpfApp.DataProtocol\bin\Debug\net452\WpfApp.DataProtocol.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.DataProtocol\bin\Debug\net452\WpfApp.DataProtocol.pdb
-C:\Users\chasky\Documents\WpfApp\WpfApp.DataProtocol\obj\Debug\net452\WpfApp.DataProtocol.csprojAssemblyReference.cache
 C:\Users\chasky\Documents\WpfApp\WpfApp.DataProtocol\obj\Debug\net452\WpfApp.DataProtocol.csproj.CoreCompileInputs.cache
 C:\Users\chasky\Documents\WpfApp\WpfApp.DataProtocol\obj\Debug\net452\WpfApp.DataProtocol.AssemblyInfoInputs.cache
 C:\Users\chasky\Documents\WpfApp\WpfApp.DataProtocol\obj\Debug\net452\WpfApp.DataProtocol.AssemblyInfo.cs

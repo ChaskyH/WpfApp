@@ -50,27 +50,6 @@ namespace WpfApp.PL.ViewModel
                     new BasicFood() { Name="Pear" }
                 };
             }
-
-           // NutritionsSeriesCollection = new SeriesCollection();
-
-            FoodNutritions = new FoodNutritions()
-            {
-                FoodName = "Food Name",
-                ServingUnit = "Cups",
-                ServingQuantity = 2,
-                ServingWeight = "10",
-                TotalFat = 2,
-                SaturatedFat = 5,
-                Protien = 9,
-                Calories = 7,
-                Cholestrol = 7
-            };
-
-            Foods = new List<BasicFood>()
-                {
-                    new BasicFood()  { Name="Apple" },
-                    new BasicFood() { Name="Pear" }
-                };
         }
 
         public ICommand SearchCommand { get; set; }
@@ -150,23 +129,18 @@ namespace WpfApp.PL.ViewModel
 
                 if (_FoodNutritions != null)
                 {
-                    NutritionsSeriesCollection = new SeriesCollection()
-                    {
-                        new ColumnSeries()
-                        {
-                            Values = new ChartValues<double>() {
-                                _FoodNutritions.Calories,
-                                _FoodNutritions.Cholestrol,
-                                _FoodNutritions.Sugars,
-                                _FoodNutritions.SaturatedFat,
-                                _FoodNutritions.TotalFat,
-                                _FoodNutritions.TotalCarbohydrate,
-                                _FoodNutritions.Sodium,
-                                _FoodNutritions.Protien,
-                                _FoodNutritions.Potassium
-                            }
-                        }
+                    NutritionsChartValues = new ChartValues<double>() {
+                        _FoodNutritions.Calories,
+                        _FoodNutritions.Cholestrol,
+                        _FoodNutritions.Sugars,
+                        _FoodNutritions.SaturatedFat,
+                        _FoodNutritions.TotalFat,
+                        _FoodNutritions.TotalCarbohydrate,
+                        _FoodNutritions.Sodium,
+                        _FoodNutritions.Protien,
+                        _FoodNutritions.Potassium
                     };
+                        
                 }
 
                 RaisePropertyChanged("FoodNutritions");
@@ -174,23 +148,23 @@ namespace WpfApp.PL.ViewModel
         }
 
         /// <summary>
-        /// The <see cref="NutritionsSeriesCollection" /> property.
+        /// The <see cref="NutritionsChartValues" /> property.
         /// </summary>
-        private SeriesCollection _NutritionsSeriesCollection = null;
-        public SeriesCollection NutritionsSeriesCollection
+        private ChartValues<double> _NutritionsChartValues = null;
+        public ChartValues<double> NutritionsChartValues
         {
             get
             {
-                return _NutritionsSeriesCollection;
+                return _NutritionsChartValues;
             }
             set
             {
-                if (_NutritionsSeriesCollection == value)
+                if (_NutritionsChartValues == value)
                 {
                     return;
                 }
-                _NutritionsSeriesCollection = value;
-                RaisePropertyChanged("NutritionsSeriesCollection");
+                _NutritionsChartValues = value;
+                RaisePropertyChanged("NutritionsChartValues");
             }
         }
         

@@ -13,8 +13,6 @@ C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DAL\bin\Debug\net452\EntityFramework
 C:\Users\chasky\Documents\prg\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.AssemblyInfoInputs.cache
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DAL.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DAL.pdb
-C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\EntityFramework.SqlServer.dll
-C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\EntityFramework.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DataProtocol.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DataProtocol.pdb
 C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\obj\Debug\net452\WpfApp.DAL.csprojAssemblyReference.cache
@@ -40,3 +38,5 @@ C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.dll
 C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DataProtocol.dll
 C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\WpfApp.DataProtocol.pdb
 C:\Users\student\me\WpfApp\WpfApp.DAL\bin\Debug\net452\System.Net.Http.xml
+C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\EntityFramework.SqlServer.dll
+C:\Users\chasky\Documents\WpfApp\WpfApp.DAL\bin\Debug\net452\EntityFramework.dll
