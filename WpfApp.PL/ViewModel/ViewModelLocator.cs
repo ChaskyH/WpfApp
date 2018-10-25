@@ -15,6 +15,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using CommonServiceLocator;
+using System;
 
 namespace WpfApp.PL.ViewModel
 {
@@ -78,7 +79,7 @@ namespace WpfApp.PL.ViewModel
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<FoodBrowserViewModel>();
+                return ServiceLocator.Current.GetInstance<FoodBrowserViewModel>(Guid.NewGuid().ToString());
             }
         }
 

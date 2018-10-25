@@ -83,6 +83,7 @@
     <Compile Include="Converters\InverseBooleanValueConverter.cs" />
     <Compile Include="Converters\MutilpleValues2ArrayConverter.cs" />
     <Compile Include="Converters\SingleValue2ArrayConverter.cs" />
+    <Compile Include="Commands\NavigationCommand.cs" />
     <Compile Include="Validators\NonEmptyValidationRule.cs" />
     <Compile Include="ViewModel\CreateUserViewModel.cs" />
     <Compile Include="ViewModel\FoodBrowserViewModel.cs" />
@@ -146,9 +147,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\WpfApp.BLL\WpfApp.BLL.csproj">
       <Project>{65d30a47-a622-4243-bc60-6f0eba2d295b}</Project>

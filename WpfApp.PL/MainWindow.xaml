@@ -7,6 +7,8 @@
         xmlns:controls="clr-namespace:WpfApp.PL.Controls"
         xmlns:vms="clr-namespace:WpfApp.PL.ViewModel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         mc:Ignorable="d" 
         WindowStartupLocation="CenterScreen" 
         WindowStyle="None"
@@ -87,13 +89,29 @@
                         </ToggleButton>
                     </Grid>
                     <ListView x:Name="ListViewMenu" Foreground="White" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ListViewItem Height="60">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonUp">
+                                    <cmd:EventToCommand Command="{StaticResource NavigationCommand}" CommandParameter="Back"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="ArrowLeftBold" Height="25" Width="25" Margin="10"/>
+                                <TextBlock Text="Back" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </ListViewItem>
                         <ListViewItem x:Name="ItemHome" Height="60">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="10"/>
                                 <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>
-                        <ListViewItem x:Name="ItemCreate" Height="60">
+                        <ListViewItem Height="60">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonUp">
+                                    <cmd:EventToCommand Command="{StaticResource NavigationCommand}" CommandParameter="FoodBrowser"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Magnify" Height="25" Width="25" Margin="10"/>
                                 <TextBlock Text="Browse Foods" VerticalAlignment="Center" Margin="20 10"/>
@@ -114,7 +132,9 @@
                     </ListView>
                 </StackPanel>
             </Grid>
-            <controls:FoodBrowser Grid.Column="1" Grid.Row="1" Padding="20 20 20 20"/>
+            <Grid Name="ControlPlaceHolder" Grid.Column="1" Grid.Row="1" Margin="20 20 20 20">
+
+            </Grid>
         </Grid>
     </materialDesign:DialogHost>
 </Window>

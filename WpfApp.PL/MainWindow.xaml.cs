@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using WpfApp.PL.Controls;
 using WpfApp.PL.ViewModel;
 using MaterialDesignThemes.Wpf;
+using WpfApp.PL.Commands;
 
 namespace WpfApp.PL
 {
@@ -26,6 +27,15 @@ namespace WpfApp.PL
         public MainWindow()
         {
             InitializeComponent();
+
+            NavigationCommand navigationCommand = App.Current.Resources["NavigationCommand"] as NavigationCommand;
+            navigationCommand.MainWindow = this;
+        }
+
+        public void ShowControl(UserControl control)
+        {
+            ControlPlaceHolder.Children.Clear();
+            ControlPlaceHolder.Children.Add(control);
         }
     }
 }

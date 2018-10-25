@@ -5,6 +5,7 @@
     xmlns:local="clr-namespace:WpfApp.PL" 
     xmlns:vm="clr-namespace:WpfApp.PL.ViewModel" 
     xmlns:converters="clr-namespace:WpfApp.PL.Converters"  
+    xmlns:commands="clr-namespace:WpfApp.PL.Commands"  
     StartupUri="MainWindow.xaml" 
     xmlns:properties="clr-namespace:WpfApp.PL.Properties"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
@@ -28,10 +29,11 @@
             <converters:InverseBoolean2VisiblityConverter x:Key="InverseBoolean2VisibiltyConverter"/>
             <converters:Boolean2VisibiltiyConverter x:Key="Boolean2VisibiltyConverter"/>
             <converters:SingleValue2ArrayConverter x:Key="SingleValue2ArrayConverter"/>
-            <vm:ViewModelLocator x:Key="ViewModelLocator" />
+            <vm:ViewModelLocator x:Name="VMLocator" x:Key="ViewModelLocator" />
             <SolidColorBrush Color="{StaticResource Primary600}" x:Key="PrimaryBrush" />
             <SolidColorBrush Color="{StaticResource Accent400}" x:Key="AccentBrush" />
             <properties:Settings x:Key="UserId"/>
+            <commands:NavigationCommand x:Key="NavigationCommand"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
