@@ -133,3 +133,5 @@ C:\Users\chasky\Documents\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.pdb
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.Wpf.dll
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\AddMealControl.g.cs
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\AddMealControl.baml

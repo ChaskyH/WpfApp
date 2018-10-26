@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,12 @@ namespace WpfApp.DataProtocol
 {
     public class FoodNutritions
     {
+        public FoodNutritions()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public Guid Id { get; set; }
         public String FoodName { get; set; }
 
         public int ServingQuantity { get; set; }
@@ -25,6 +32,13 @@ namespace WpfApp.DataProtocol
         public double Protien { get; set; }
         public double Potassium { get; set; }
 
+        [NotMapped]
         public Uri Photo { get; set; }
+
+        public String DBPhoto
+        {
+            get { return Photo.AbsoluteUri; }
+            set { Photo = new Uri(value); }
+        }
     }
 }

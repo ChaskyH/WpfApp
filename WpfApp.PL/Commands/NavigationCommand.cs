@@ -71,6 +71,7 @@ namespace WpfApp.PL.Commands
                 case Navigation.Dashboard:
                     break;
                 case Navigation.AddMeal:
+                    res = new AddMealControl();
                     break;
                 case Navigation.AccountInfo:
                     break;

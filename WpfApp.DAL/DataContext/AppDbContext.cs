@@ -15,5 +15,6 @@ namespace WpfApp.DAL.DataContext
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Meal> Meals { get; set; }
     }
 }

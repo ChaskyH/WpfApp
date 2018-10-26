@@ -53,6 +53,8 @@ namespace WpfApp.DAL.NutritionAPI
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
             MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Ignore,
+            NullValueHandling = NullValueHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
             Converters = {
             new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }

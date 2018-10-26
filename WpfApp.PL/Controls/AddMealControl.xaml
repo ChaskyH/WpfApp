@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="WpfApp.PL.Controls.AddMealControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp.PL.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=MealAdder}">
+    <UserControl.Resources>
+        <DataTemplate x:Key="ThumbnailCellTemplate">
+            <Image Source="{Binding Path=Photo}" Height="35" />
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBox  Style="{StaticResource MaterialDesignTextAreaTextBox}"
+                  Margin="10,22.5,10,10"
+                  VerticalAlignment="Top"
+                  Height="100"
+                  AcceptsReturn="True"
+                  TextWrapping="Wrap"
+                  VerticalScrollBarVisibility="Auto"
+                  materialDesign:HintAssist.IsFloating="False"
+                  materialDesign:HintAssist.Hint="For breakfast I ate two apples, a bowl of cereal and 3 glasses of milk"
+                  Text="{Binding MealString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <StackPanel Grid.Column="1" Margin="10" VerticalAlignment="Center">
+            <Button Margin="5" Command="{Binding AddToMealCommand}">
+                Add
+            </Button>
+            <Button Margin="5" Command="{Binding ClearMealCommand}">
+                Clear
+            </Button>
+            <Button Margin="5" Command="{Binding ClearMealCommand}">
+                Save
+            </Button>
+        </StackPanel>
+        <DataGrid ItemsSource="{Binding Path=Meal.Foods, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="10"
+                  CanUserSortColumns="True"
+                  SelectionMode="Single" SelectionUnit="FullRow"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="True"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Photo" CellTemplate="{StaticResource ThumbnailCellTemplate}"/>
+
+                <DataGridTextColumn  Header="Name" Binding="{Binding FoodName}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Amount" Binding="{Binding ServingQuantity}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Units" Binding="{Binding ServingUnit}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Weight (g)" Binding="{Binding ServingWeight}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Cal" Binding="{Binding Calories}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Protien" Binding="{Binding Protien}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Sugars" Binding="{Binding Sugars}" TextBlock.TextAlignment="Center"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <lvc:CartesianChart Grid.Row="1" Grid.Column="1" Margin="10, 5, 10, 5">
+            <lvc:CartesianChart.Series>
+                <lvc:RowSeries Values="{Binding TotalChartValues}" MaxRowHeigth="20" RowPadding="1" DataLabels="True">
+
+                </lvc:RowSeries>
+            </lvc:CartesianChart.Series>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Nutrition" Labels="{Binding Labels}">
+                    <lvc:Axis.Separator>
+                        <lvc:Separator Step="1" IsEnabled="False"/>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Value (g)"></lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+        </lvc:CartesianChart>
+    </Grid>
+</UserControl>

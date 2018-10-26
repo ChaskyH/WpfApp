@@ -47,6 +47,7 @@ namespace WpfApp.PL.ViewModel
             SimpleIoc.Default.Register<LogInViewModel>();
             SimpleIoc.Default.Register<CreateUserViewModel>();
             SimpleIoc.Default.Register<FoodBrowserViewModel>();
+            SimpleIoc.Default.Register<AddMealViewModel>();
         }
 
         public MainViewModel Main
@@ -80,6 +81,16 @@ namespace WpfApp.PL.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<FoodBrowserViewModel>(Guid.NewGuid().ToString());
+            }
+        }
+
+        public AddMealViewModel MealAdder
+        {
+            get
+            {
+                var res = ServiceLocator.Current.GetInstance<AddMealViewModel>();
+                res.User = Main.User;
+                return res;
             }
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp.DAL;
 using WpfApp.DAL.NutritionAPI;
 using WpfApp.DataProtocol;
 
@@ -62,6 +63,44 @@ namespace WpfApp.BLL.Foods
             }
 
             return res;
+        }
+
+        public async Task<Meal> AddToMealAsync(Meal meal, String query)
+        {
+            APICall apiCall = new APICall();
+            Meal newMeal = await apiCall.GetMealAsync(query);
+
+            if (meal == null)
+            {
+                meal = new Meal();
+            }
+
+            foreach (var food in newMeal.Foods)
+            {
+                if (food.ServingUnit == "meal")
+                {
+                    meal.Type = food.ServingUnit;
+                }
+                else
+                {
+                    meal.Foods.Add(food);
+                }
+            }
+
+            return meal;
+        }
+
+        public async Task AddMeal(User user, Meal meal)
+        {
+            if (meal.Foods.Count > 0)
+            {
+                MealService mealService = new MealService()
+                {
+                    User = user
+                };
+
+                await mealService.AddMeal(meal);
+            }
         }
     }
 }

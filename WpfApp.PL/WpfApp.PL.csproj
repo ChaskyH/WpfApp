@@ -71,6 +71,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Assistants\PasswordAssistant.cs" />
+    <Compile Include="Controls\AddMealControl.xaml.cs">
+      <DependentUpon>AddMealControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CreateUserControl.xaml.cs">
       <DependentUpon>CreateUserControl.xaml</DependentUpon>
     </Compile>
@@ -85,11 +88,16 @@
     <Compile Include="Converters\SingleValue2ArrayConverter.cs" />
     <Compile Include="Commands\NavigationCommand.cs" />
     <Compile Include="Validators\NonEmptyValidationRule.cs" />
+    <Compile Include="ViewModel\AddMealViewModel.cs" />
     <Compile Include="ViewModel\CreateUserViewModel.cs" />
     <Compile Include="ViewModel\FoodBrowserViewModel.cs" />
     <Compile Include="ViewModel\LogInViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Page Include="Controls\AddMealControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\CreateUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
