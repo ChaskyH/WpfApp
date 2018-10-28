@@ -12,6 +12,8 @@
         mc:Ignorable="d" 
         WindowStartupLocation="CenterScreen" 
         WindowStyle="None"
+        Height="680"
+        Width="1200"
         DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=Main}">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
@@ -108,7 +110,7 @@
                             </i:Interaction.Triggers>
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="10"/>
-                                <TextBox Text="Home" VerticalAlignment="Center" Margin="20 10"/>
+                                <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="60">

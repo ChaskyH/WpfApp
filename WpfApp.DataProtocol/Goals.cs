@@ -10,7 +10,7 @@ namespace WpfApp.DataProtocol
     {
         public Goals()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             Nutritions = new FoodNutritions();
         }
 

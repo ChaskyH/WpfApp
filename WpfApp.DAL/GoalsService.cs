@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfApp.DAL.DataContext;
 using WpfApp.DataProtocol;
+using System.Data.Entity;
 
 namespace WpfApp.DAL
 {
@@ -32,7 +33,7 @@ namespace WpfApp.DAL
             {
                 using (var db = new AppDbContext())
                 {
-                    return db.Goals.Where(g => g.UserId == User.Id).ToList();
+                    return db.Goals.Where(g => g.UserId == User.Id).Include(g => g.Nutritions).ToList();
                 }
             }
         }

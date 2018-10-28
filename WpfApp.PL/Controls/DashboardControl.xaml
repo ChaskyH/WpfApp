@@ -20,14 +20,14 @@
             </Button>
         </StackPanel>
         <materialDesign:Card Grid.Row="2" Height="400" Margin="20" >
-            <lvc:CartesianChart Margin="10, 5, 10, 5">
+            <lvc:CartesianChart Margin="10, 5, 10, 5" LegendLocation="Right">
                 <lvc:CartesianChart.Series>
-                    <lvc:ColumnSeries Title="Goal" Values="{Binding Goals.Nutritions, Converter={StaticResource Object2ChartValuesConverter}}" ColumnPadding="1" DataLabels="True">
+                    <lvc:RowSeries Title="Goal" Values="{Binding Goals.Nutritions, Converter={StaticResource Object2ChartValuesConverter}}" RowPadding="1" DataLabels="True">
 
-                    </lvc:ColumnSeries>
-                    <lvc:ColumnSeries Values="{Binding Weekly, Converter={StaticResource Object2ChartValuesConverter}}" ColumnPadding="1" DataLabels="True">
+                    </lvc:RowSeries>
+                    <lvc:RowSeries Title="Actual" Values="{Binding Weekly, Converter={StaticResource Object2ChartValuesConverter}}" RowPadding="1" DataLabels="True">
 
-                    </lvc:ColumnSeries>
+                    </lvc:RowSeries>
                 </lvc:CartesianChart.Series>
                 <lvc:CartesianChart.AxisY>
                     <lvc:Axis Title="Nutrition">
