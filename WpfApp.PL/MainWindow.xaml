@@ -61,7 +61,7 @@
                     <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10" Foreground="White">
                         <StackPanel Width="150">
                             <Button Content="Settings"/>
-                            <Button Content="Account"/>
+                            <Button Content="Goals" Command="{StaticResource NavigationCommand}" CommandParameter="AccountInfo"/>
                             <Button Content="About"/>
                             <Separator/>
                             <Button Content="Logout" Command="{Binding LogOutCommand}"/>
@@ -101,6 +101,11 @@
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem x:Name="ItemHome" Height="60">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonUp">
+                                    <cmd:EventToCommand Command="{StaticResource NavigationCommand}" CommandParameter="Dashboard"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="10"/>
                                 <TextBox Text="Home" VerticalAlignment="Center" Margin="20 10"/>
@@ -129,8 +134,13 @@
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="60">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonUp">
+                                    <cmd:EventToCommand Command="{StaticResource NavigationCommand}" CommandParameter="Meals"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Message" Height="25" Width="25" Margin="10"/>
+                                <materialDesign:PackIcon Kind="FoodVariant" Height="25" Width="25" Margin="10"/>
                                 <TextBlock Text="Messages" VerticalAlignment="Center"  Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>

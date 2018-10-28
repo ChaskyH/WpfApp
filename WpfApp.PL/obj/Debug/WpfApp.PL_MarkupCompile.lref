@@ -1,9 +1,12 @@
 ﻿
 FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\App.xaml;;
+FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\DashboardControl.xaml;;
+FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\GoalsControl.xaml;;
 FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\AddMealControl.xaml;;
 FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\CreateUserControl.xaml;;
 FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\FoodBrowser.xaml;;
 FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\LogInControl.xaml;;
+FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\MealsControl.xaml;;
 FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\Controls\NutritionsGraphControl.xaml;;
 FC:\Users\chasky\Documents\WpfApp\WpfApp.PL\MainWindow.xaml;;
 

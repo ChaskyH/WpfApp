@@ -48,6 +48,9 @@ namespace WpfApp.PL.ViewModel
             SimpleIoc.Default.Register<CreateUserViewModel>();
             SimpleIoc.Default.Register<FoodBrowserViewModel>();
             SimpleIoc.Default.Register<AddMealViewModel>();
+            SimpleIoc.Default.Register<MealsViewModel>();
+            SimpleIoc.Default.Register<GoalsViewModel>();
+            SimpleIoc.Default.Register<DashboardViewModel>();
         }
 
         public MainViewModel Main
@@ -89,6 +92,36 @@ namespace WpfApp.PL.ViewModel
             get
             {
                 var res = ServiceLocator.Current.GetInstance<AddMealViewModel>();
+                res.User = Main.User;
+                return res;
+            }
+        }
+
+        public MealsViewModel Meals
+        {
+            get
+            {
+                var res = ServiceLocator.Current.GetInstance<MealsViewModel>();
+                res.User = Main.User;
+                return res;
+            }
+        }
+
+        public GoalsViewModel Goals
+        {
+            get
+            {
+                var res = ServiceLocator.Current.GetInstance<GoalsViewModel>();
+                res.User = Main.User;
+                return res;
+            }
+        }
+
+        public DashboardViewModel Dashboard
+        {
+            get
+            {
+                var res = ServiceLocator.Current.GetInstance<DashboardViewModel>();
                 res.User = Main.User;
                 return res;
             }

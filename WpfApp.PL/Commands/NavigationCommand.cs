@@ -13,7 +13,7 @@ namespace WpfApp.PL.Commands
     {
         public enum Navigation
         {
-            None, Back, FoodBrowser, Dashboard, AddMeal, AccountInfo
+            None, Back, FoodBrowser, Dashboard, AddMeal, AccountInfo, Meals
         }
 
         public NavigationCommand()
@@ -69,11 +69,17 @@ namespace WpfApp.PL.Commands
                     res = new FoodBrowser();
                     break;
                 case Navigation.Dashboard:
+                    UserControls.Clear();
+                    res = new DashboardControl();
                     break;
                 case Navigation.AddMeal:
                     res = new AddMealControl();
                     break;
                 case Navigation.AccountInfo:
+                    res = new GoalsControl();
+                    break;
+                case Navigation.Meals:
+                    res = new MealsControl();
                     break;
             }
 

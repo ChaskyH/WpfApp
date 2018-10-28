@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 using WpfApp.DAL.DataContext;
 using WpfApp.DataProtocol;
 
@@ -28,6 +29,19 @@ namespace WpfApp.DAL
                     }
                 }
             }
+        }
+
+        public List<Meal> GetMeals()
+        {
+            if (User != null)
+            {
+                using (var db = new AppDbContext())
+                {
+                    return db.Meals.Include(m => m.Foods).Where((m) => m.UserId == User.Id).ToList();
+                }
+            }
+
+            return null;
         }
     }
 }

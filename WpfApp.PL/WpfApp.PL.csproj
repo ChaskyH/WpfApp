@@ -52,6 +52,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -71,6 +73,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Assistants\PasswordAssistant.cs" />
+    <Compile Include="Controls\DashboardControl.xaml.cs">
+      <DependentUpon>DashboardControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GoalsControl.xaml.cs">
+      <DependentUpon>GoalsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AddMealControl.xaml.cs">
       <DependentUpon>AddMealControl.xaml</DependentUpon>
     </Compile>
@@ -79,6 +87,9 @@
     </Compile>
     <Compile Include="Controls\FoodBrowser.xaml.cs">
       <DependentUpon>FoodBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MealsControl.xaml.cs">
+      <DependentUpon>MealsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\NutritionsGraphControl.xaml.cs">
       <DependentUpon>NutritionsGraphControl.xaml</DependentUpon>
@@ -92,12 +103,23 @@
     <Compile Include="Converters\SingleValue2ArrayConverter.cs" />
     <Compile Include="Commands\NavigationCommand.cs" />
     <Compile Include="Validators\NonEmptyValidationRule.cs" />
+    <Compile Include="ViewModel\DashboardViewModel.cs" />
+    <Compile Include="ViewModel\GoalsViewModel.cs" />
     <Compile Include="ViewModel\AddMealViewModel.cs" />
     <Compile Include="ViewModel\CreateUserViewModel.cs" />
     <Compile Include="ViewModel\FoodBrowserViewModel.cs" />
     <Compile Include="ViewModel\LogInViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MealsViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Page Include="Controls\DashboardControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GoalsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AddMealControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\LogInControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MealsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

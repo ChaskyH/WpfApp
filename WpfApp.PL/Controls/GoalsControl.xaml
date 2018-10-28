@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="WpfApp.PL.Controls.GoalsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp.PL.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=Goals}">
+
+    <StackPanel Orientation="Vertical" >
+        <DatePicker
+                        VerticalAlignment="Bottom"
+                        materialDesign:HintAssist.Hint="Goal Start Date"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+                        SelectedDate="{Binding Goals.GoalStartDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     materialDesign:HintAssist.Hint="Calories" 
+                     materialDesign:HintAssist.IsFloating="True" 
+                     Margin="0 12 0 0"
+                     Text="{Binding Goals.Nutritions.Calories, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     materialDesign:HintAssist.Hint="Sugars" 
+                     materialDesign:HintAssist.IsFloating="True" 
+                     Margin="0 12 0 0"
+                     Text="{Binding Goals.Nutritions.Sugars, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     materialDesign:HintAssist.Hint="Total Carbohydrate" 
+                     materialDesign:HintAssist.IsFloating="True" 
+                     Margin="0 12 0 0"
+                     Text="{Binding Goals.Nutritions.TotalCarbohydrate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     materialDesign:HintAssist.Hint="Total Fat" 
+                     materialDesign:HintAssist.IsFloating="True" 
+                     Margin="0 12 0 0"
+                     Text="{Binding Goals.Nutritions.TotalFat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     materialDesign:HintAssist.Hint="Protien" 
+                     materialDesign:HintAssist.IsFloating="True" 
+                     Margin="0 12 0 0"
+                     Text="{Binding Goals.Nutritions.Protien, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button  Margin="0 12 0 0" Command="{Binding AddGoadCommand}">
+            Add
+        </Button>
+    </StackPanel>
+</UserControl>

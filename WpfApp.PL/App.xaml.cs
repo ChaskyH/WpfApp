@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfApp.PL.Commands;
 
 namespace WpfApp.PL
 {
@@ -13,5 +14,9 @@ namespace WpfApp.PL
     /// </summary>
     public partial class App : Application
     {
+        public NavigationCommand NavigationCommand
+        {
+            get { return Resources["NavigationCommand"] as NavigationCommand; }
+        }
     }
 }

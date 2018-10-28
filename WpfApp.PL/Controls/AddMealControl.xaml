@@ -40,7 +40,7 @@
             <Button Margin="5" Command="{Binding ClearMealCommand}">
                 Clear
             </Button>
-            <Button Margin="5" Command="{Binding ClearMealCommand}">
+            <Button Margin="5" Command="{Binding SaveCommand}">
                 Save
             </Button>
         </StackPanel>

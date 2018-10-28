@@ -37,7 +37,7 @@ namespace WpfApp.DataProtocol
 
         public String DBPhoto
         {
-            get { return Photo.AbsoluteUri; }
+            get { return Photo != null ? Photo.AbsoluteUri : ""; }
             set { Photo = new Uri(value); }
         }
     }

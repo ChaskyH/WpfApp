@@ -38,6 +38,7 @@ namespace WpfApp.PL.ViewModel
         {
             FoodLogic foodLogic = new FoodLogic();
             await foodLogic.AddMeal(User, Meal);
+            Clear();
         }
 
         public void Clear()

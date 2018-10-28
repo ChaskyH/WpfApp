@@ -104,5 +104,41 @@ namespace WpfApp.BLL.Foods
                 await mealService.AddMeal(meal);
             }
         }
+
+        public List<Meal> GetMeals(User user, DateTime from, DateTime to)
+        {
+            MealService mealService = new MealService()
+            {
+                User = user
+            };
+
+            List<Meal> meals = mealService.GetMeals();
+
+            return meals.Where((m) => { return m.Date >= from && m.Date <= to; }).ToList();             
+        }
+
+        public FoodNutritions GetTotals(List<Meal> meals)
+        {
+            FoodNutritions res = null;
+
+            if (meals != null)
+            {
+                res = new FoodNutritions()
+                {
+                    Calories = meals.Sum(meal => meal.Totals.Calories),
+                    SaturatedFat = meals.Sum(meal => meal.Totals.SaturatedFat),
+                    TotalFat = meals.Sum(meal => meal.Totals.TotalFat),
+                    Sodium = meals.Sum(meal => meal.Totals.Sodium),
+                    Potassium = meals.Sum(meal => meal.Totals.Potassium),
+                    Protien = meals.Sum(meal => meal.Totals.Protien),
+                    DietaryFiber = meals.Sum(meal => meal.Totals.DietaryFiber),
+                    Sugars = meals.Sum(meal => meal.Totals.Sugars),
+                    Cholestrol = meals.Sum(meal => meal.Totals.Cholestrol),
+                    TotalCarbohydrate = meals.Sum(meal => meal.Totals.TotalCarbohydrate)
+                };
+            }
+
+            return res;
+        }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\App.xaml
-6-342883415
+9907540809
 
-261765474777
-81-1421065842
-Controls\AddMealControl.xaml;Controls\CreateUserControl.xaml;Controls\FoodBrowser.xaml;Controls\LogInControl.xaml;Controls\NutritionsGraphControl.xaml;MainWindow.xaml;
+32-25607519
+83-1006338230
+Controls\DashboardControl.xaml;Controls\GoalsControl.xaml;Controls\AddMealControl.xaml;Controls\CreateUserControl.xaml;Controls\FoodBrowser.xaml;Controls\LogInControl.xaml;Controls\MealsControl.xaml;Controls\NutritionsGraphControl.xaml;MainWindow.xaml;
 
 False
 

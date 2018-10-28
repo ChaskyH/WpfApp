@@ -4,9 +4,51 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp.PL.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" 
+             DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=Meals}">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="10" HorizontalAlignment="Stretch">
+            <DatePicker
+                VerticalAlignment="Bottom"
+                        materialDesign:HintAssist.Hint="From"
+                    materialDesign:HintAssist.IsFloating="True"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+                        Width="200" Margin="10,0,10,0"
+                        SelectedDate="{Binding From, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <DatePicker
+                VerticalAlignment="Bottom"
+                        materialDesign:HintAssist.Hint="To"
+                    materialDesign:HintAssist.IsFloating="True"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+                        Width="200" Margin="10,0,10,0"
+                        SelectedDate="{Binding To, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Width="200" VerticalAlignment="Bottom" Command="{Binding SearchCommand}">
+                Search
+            </Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Path=Meals, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                  CanUserSortColumns="True"
+                  SelectionMode="Single" SelectionUnit="FullRow"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <materialDesign:MaterialDataGridTextColumn Header="Type" Binding="{Binding Type}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Date" Binding="{Binding Date}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Cal" Binding="{Binding Totals.Calories}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Protien" Binding="{Binding Totals.Protien}" TextBlock.TextAlignment="Center"/>
+                <materialDesign:MaterialDataGridTextColumn Header="Sugars" Binding="{Binding Totals.Sugars}" TextBlock.TextAlignment="Center"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <local:NutritionsGraphControl Grid.Row="1" Grid.Column="1" DataContext="{Binding Totals}"/>
     </Grid>
 </UserControl>

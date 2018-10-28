@@ -137,3 +137,9 @@ C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\AddMealControl.g.c
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\AddMealControl.baml
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\NutritionsGraphControl.g.cs
 C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\NutritionsGraphControl.baml
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\MealsControl.g.cs
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\MealsControl.baml
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\GoalsControl.g.cs
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\GoalsControl.baml
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\DashboardControl.g.cs
+C:\Users\chasky\Documents\WpfApp\WpfApp.PL\obj\Debug\Controls\DashboardControl.baml
