@@ -80,11 +80,15 @@
     <Compile Include="Controls\FoodBrowser.xaml.cs">
       <DependentUpon>FoodBrowser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NutritionsGraphControl.xaml.cs">
+      <DependentUpon>NutritionsGraphControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\Boolean2VisibiltiyConverter.cs" />
     <Compile Include="Converters\Color2BrushConverter.cs" />
     <Compile Include="Converters\InverseBoolean2VisiblityConverter.cs" />
     <Compile Include="Converters\InverseBooleanValueConverter.cs" />
     <Compile Include="Converters\MutilpleValues2ArrayConverter.cs" />
+    <Compile Include="Converters\Object2ChartValuesConverter.cs" />
     <Compile Include="Converters\SingleValue2ArrayConverter.cs" />
     <Compile Include="Commands\NavigationCommand.cs" />
     <Compile Include="Validators\NonEmptyValidationRule.cs" />
@@ -107,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\LogInControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NutritionsGraphControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

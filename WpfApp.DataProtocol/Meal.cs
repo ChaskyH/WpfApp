@@ -19,6 +19,7 @@ namespace WpfApp.DataProtocol
         public Guid UserId { get; set; }
         public String Type { get; set; }
         public ObservableCollection<FoodNutritions> Foods { get; set; }
+        public DateTime Date { get; set; }
 
         public FoodNutritions Totals
         {

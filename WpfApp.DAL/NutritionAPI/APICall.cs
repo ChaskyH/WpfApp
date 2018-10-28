@@ -122,9 +122,23 @@ namespace WpfApp.DAL.NutritionAPI
                                 Potassium = no.NfPotassium,
                                 Photo = no.Photo.Highres
                             });
+
+                            meal.Date = food["consumed_at"].ToObject<DateTime>();
+
+                            switch (int.Parse(food["meal_type"].ToString()))
+                            {
+                                case 1: meal.Type = "Breakfast"; break;
+                                case 2: meal.Type = "Morning Snack"; break;
+                                case 3: meal.Type = "Lunch"; break;
+                                case 4: meal.Type = "Afternoon Snack"; break;
+                                case 5: meal.Type = "Dinner"; break;
+                                case 6: meal.Type = "Evening Snack"; break;
+                            };
                         }
                     }
-
+                    
+                    
+                    
                     return meal;
                 }
                 catch (Exception)

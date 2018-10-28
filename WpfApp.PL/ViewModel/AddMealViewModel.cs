@@ -56,6 +56,7 @@ namespace WpfApp.PL.ViewModel
             base.RaisePropertyChanged(propertyName);
             AddToMealCommand.RaiseCanExecuteChanged();
             ClearMealCommand.RaiseCanExecuteChanged();
+            SaveCommand.RaiseCanExecuteChanged();
         }
 
         /// <summary>
@@ -72,7 +73,6 @@ namespace WpfApp.PL.ViewModel
             {
                 _Meal = value;
                 RaisePropertyChanged("Meal");
-                RaisePropertyChanged("TotalChartValues");
             }
         }
 
@@ -94,66 +94,6 @@ namespace WpfApp.PL.ViewModel
                 }
                 _MealString = value;
                 RaisePropertyChanged("MealString");
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="TotalChartValues" /> property.
-        /// </summary>
-        public ChartValues<double> TotalChartValues
-        {
-            get
-            {
-                ChartValues<double> res = null;
-                if (Meal != null)
-                {
-                    FoodNutritions totals = Meal.Totals;
-                    return new ChartValues<double>()
-                    {
-                        totals.Calories,
-                        totals.Cholestrol,
-                        totals.Sugars,
-                        totals.SaturatedFat,
-                        totals.TotalFat,
-                        totals.TotalCarbohydrate,
-                        totals.Sodium,
-                        totals.Protien,
-                        totals.Potassium
-                    };
-                }
-                return res;
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="Labels" /> property.
-        /// </summary>
-        private String[] _Labels = new string[] 
-        {
-            "Calories",
-            "Cholestrol",
-            "Sugars",
-            "Saturated Fat",
-            "Total Fat",
-            "Total Carbohydrate",
-            "Sodium",
-            "Protien",
-            "Potassium"
-        };
-        public String[] Labels
-        {
-            get
-            {
-                return _Labels;
-            }
-            set
-            {
-                if (_Labels == value)
-                {
-                    return;
-                }
-                _Labels = value;
-                RaisePropertyChanged("Labels");
             }
         }
     }

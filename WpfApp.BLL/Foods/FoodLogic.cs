@@ -77,15 +77,17 @@ namespace WpfApp.BLL.Foods
 
             foreach (var food in newMeal.Foods)
             {
-                if (food.ServingUnit == "meal")
-                {
-                    meal.Type = food.ServingUnit;
-                }
-                else
+                if (food.ServingUnit != "meal")
                 {
                     meal.Foods.Add(food);
                 }
             }
+
+            if (meal.Type == null || meal.Type.Length == 0)
+                meal.Type = newMeal.Type;
+
+            if (meal.Date == null || meal.Date == DateTime.MinValue)
+                meal.Date = newMeal.Date;
 
             return meal;
         }

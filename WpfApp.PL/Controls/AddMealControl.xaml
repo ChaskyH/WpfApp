@@ -44,41 +44,45 @@
                 Save
             </Button>
         </StackPanel>
-        <DataGrid ItemsSource="{Binding Path=Meal.Foods, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="10"
+        <StackPanel Orientation="Vertical" Grid.Row="1" Margin="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     materialDesign:HintAssist.Hint="Type" 
+                     materialDesign:HintAssist.IsFloating="True"
+                      Width="200" Margin="0,0,10,0"
+                     Text="{Binding Meal.Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DatePicker
+                        materialDesign:HintAssist.Hint="Date"
+                    materialDesign:HintAssist.IsFloating="True"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+                        Width="200" Margin="10,0,10,0"
+                        SelectedDate="{Binding Meal.Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <materialDesign:TimePicker Is24Hours="True" Width="200"  Margin="10,0,0,0" VerticalAlignment="Bottom"
+                                           materialDesign:HintAssist.Hint="Time"
+                                           materialDesign:HintAssist.IsFloating="True"
+                                           SelectedTime="{Binding Meal.Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <DataGrid ItemsSource="{Binding Path=Meal.Foods, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                   CanUserSortColumns="True"
                   SelectionMode="Single" SelectionUnit="FullRow"
                   CanUserAddRows="False"
                   CanUserDeleteRows="True"
                   AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTemplateColumn Header="Photo" CellTemplate="{StaticResource ThumbnailCellTemplate}"/>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Photo" CellTemplate="{StaticResource ThumbnailCellTemplate}"/>
 
-                <DataGridTextColumn  Header="Name" Binding="{Binding FoodName}" TextBlock.TextAlignment="Center"/>
-                <materialDesign:MaterialDataGridTextColumn Header="Amount" Binding="{Binding ServingQuantity}" TextBlock.TextAlignment="Center"/>
-                <materialDesign:MaterialDataGridTextColumn Header="Units" Binding="{Binding ServingUnit}" TextBlock.TextAlignment="Center"/>
-                <materialDesign:MaterialDataGridTextColumn Header="Weight (g)" Binding="{Binding ServingWeight}" TextBlock.TextAlignment="Center"/>
-                <materialDesign:MaterialDataGridTextColumn Header="Cal" Binding="{Binding Calories}" TextBlock.TextAlignment="Center"/>
-                <materialDesign:MaterialDataGridTextColumn Header="Protien" Binding="{Binding Protien}" TextBlock.TextAlignment="Center"/>
-                <materialDesign:MaterialDataGridTextColumn Header="Sugars" Binding="{Binding Sugars}" TextBlock.TextAlignment="Center"/>
-            </DataGrid.Columns>
-        </DataGrid>
+                    <DataGridTextColumn  Header="Name" Binding="{Binding FoodName}" TextBlock.TextAlignment="Center"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="Amount" Binding="{Binding ServingQuantity}" TextBlock.TextAlignment="Center"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="Units" Binding="{Binding ServingUnit}" TextBlock.TextAlignment="Center"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="Weight (g)" Binding="{Binding ServingWeight}" TextBlock.TextAlignment="Center"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="Cal" Binding="{Binding Calories}" TextBlock.TextAlignment="Center"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="Protien" Binding="{Binding Protien}" TextBlock.TextAlignment="Center"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="Sugars" Binding="{Binding Sugars}" TextBlock.TextAlignment="Center"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
-        <lvc:CartesianChart Grid.Row="1" Grid.Column="1" Margin="10, 5, 10, 5">
-            <lvc:CartesianChart.Series>
-                <lvc:RowSeries Values="{Binding TotalChartValues}" MaxRowHeigth="20" RowPadding="1" DataLabels="True">
-
-                </lvc:RowSeries>
-            </lvc:CartesianChart.Series>
-            <lvc:CartesianChart.AxisY>
-                <lvc:Axis Title="Nutrition" Labels="{Binding Labels}">
-                    <lvc:Axis.Separator>
-                        <lvc:Separator Step="1" IsEnabled="False"/>
-                    </lvc:Axis.Separator>
-                </lvc:Axis>
-            </lvc:CartesianChart.AxisY>
-            <lvc:CartesianChart.AxisX>
-                <lvc:Axis Title="Value (g)"></lvc:Axis>
-            </lvc:CartesianChart.AxisX>
-        </lvc:CartesianChart>
+        </StackPanel>
+        
+        <local:NutritionsGraphControl DataContext="{Binding Meal.Totals}" Grid.Row="1" Grid.Column="1" Margin="10, 5, 10, 5"/>
     </Grid>
 </UserControl>

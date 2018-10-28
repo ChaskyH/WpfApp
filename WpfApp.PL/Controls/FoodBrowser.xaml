@@ -67,20 +67,23 @@
                 </materialDesign:ColorZone>
             </DockPanel>
         </materialDesign:ColorZone>
-        <DataGrid ItemsSource="{Binding Foods}" Grid.Row="1"
+        <StackPanel  Grid.Row="1" Orientation="Vertical">
+            <DataGrid ItemsSource="{Binding Foods}"
                   CanUserSortColumns="True"
                   IsReadOnly="True"
-                  SelectionMode="Single" SelectionUnit="FullRow"
+                  SelectionMode="Single" SelectionUnit="FullRow" AlternatingRowBackground="LightGray"
                   CanUserAddRows="False"
                   AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTemplateColumn Header="View" CellTemplate="{StaticResource ViewButtonTemplate}"/>
-                <DataGridTemplateColumn Width="80" Header="Photo" CellTemplate="{StaticResource ThumbnailCellTemplate}"/>
-                <DataGridTextColumn Width="150" Header="Name" Binding="{Binding Name}" TextBlock.TextAlignment="Center"/>
-                <materialDesign:MaterialDataGridTextColumn Width="120" Header="Serving" Binding="{Binding ServingUnits}" TextBlock.TextAlignment="Center"/>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="View" CellTemplate="{StaticResource ViewButtonTemplate}"/>
+                    <DataGridTemplateColumn Width="80" Header="Photo" CellTemplate="{StaticResource ThumbnailCellTemplate}"/>
+                    <DataGridTextColumn Width="150" Header="Name" Binding="{Binding Name}" TextBlock.TextAlignment="Center"/>
+                    <materialDesign:MaterialDataGridTextColumn Width="120" Header="Serving" Binding="{Binding ServingUnits}" TextBlock.TextAlignment="Center"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
         
-            </DataGrid.Columns>
-        </DataGrid>
         <GroupBox Grid.Column="1" Grid.Row="1" Margin="5" Padding="10"
                     Style="{DynamicResource MaterialDesignCardGroupBox}">
             <GroupBox.Header>
@@ -120,23 +123,7 @@
                             Margin="-2,0,-3,-1">
                     <Image  Source="{Binding FoodNutritions.Photo}" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Border>
-                <lvc:CartesianChart Grid.Row="1" Grid.ColumnSpan="2"  Margin="10, 5, 10, 5">
-                    <lvc:CartesianChart.Series>
-                        <lvc:RowSeries Values="{Binding NutritionsChartValues}" MaxRowHeigth="10" RowPadding="1" DataLabels="True">
-                            
-                        </lvc:RowSeries>
-                    </lvc:CartesianChart.Series>
-                    <lvc:CartesianChart.AxisY>
-                        <lvc:Axis Title="Nutrition" Labels="{Binding Labels}">
-                            <lvc:Axis.Separator>
-                                <lvc:Separator Step="1" IsEnabled="False"/>
-                            </lvc:Axis.Separator>
-                        </lvc:Axis>
-                    </lvc:CartesianChart.AxisY>
-                    <lvc:CartesianChart.AxisX>
-                        <lvc:Axis Title="Value (g)"></lvc:Axis>
-                    </lvc:CartesianChart.AxisX>
-                </lvc:CartesianChart>
+                <local:NutritionsGraphControl Grid.Row="1" Grid.ColumnSpan="2" DataContext="{Binding FoodNutritions}"></local:NutritionsGraphControl>
             </Grid>
             
         </GroupBox>

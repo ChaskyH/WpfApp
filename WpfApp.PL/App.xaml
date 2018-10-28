@@ -29,6 +29,7 @@
             <converters:InverseBoolean2VisiblityConverter x:Key="InverseBoolean2VisibiltyConverter"/>
             <converters:Boolean2VisibiltiyConverter x:Key="Boolean2VisibiltyConverter"/>
             <converters:SingleValue2ArrayConverter x:Key="SingleValue2ArrayConverter"/>
+            <converters:Object2ChartValuesConverter x:Key="Object2ChartValuesConverter"/>
             <vm:ViewModelLocator x:Name="VMLocator" x:Key="ViewModelLocator" />
             <SolidColorBrush Color="{StaticResource Primary600}" x:Key="PrimaryBrush" />
             <SolidColorBrush Color="{StaticResource Accent400}" x:Key="AccentBrush" />
